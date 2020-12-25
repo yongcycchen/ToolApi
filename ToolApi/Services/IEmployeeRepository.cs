@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using ToolApi.Entities;
 namespace ToolApi.Services
 {
-    interface IEmployeeRepository
+    public interface IEmployeeRepository
     {
         void AddEmployee(Employee employee);
 

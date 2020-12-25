@@ -11,10 +11,12 @@ namespace ToolApi.Services
     public class ToolRepository : IToolRepository
     {
         private readonly RoutineDbContext _context;
+
         public ToolRepository(RoutineDbContext context)
         {
             _context = context ?? throw new ArgumentException(nameof(context));
         }
+
         public void AddTool(Tool tool)
         {
             if (tool == null)
@@ -44,7 +46,7 @@ namespace ToolApi.Services
         {
             if (ToolId == Guid.Empty)
             {
-                throw new ArgumentNullException(nameof(ToolId));
+                throw new ArgumentException(nameof(ToolId));
             }
 
             return await _context.Tools.AnyAsync(x=>x.ToolID == ToolId);
