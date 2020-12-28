@@ -25,9 +25,9 @@ namespace ToolApi.Data
 
             modelBuilder.Entity<Employee>().Property(x => x.FSID).IsRequired();
 
-            modelBuilder.Entity<Employee>().HasNoKey();
+            modelBuilder.Entity<Employee>().HasKey(x => x.FSID);
 
-            modelBuilder.Entity<ToolOwner>().ToTable("ToolOwners");
+            modelBuilder.Entity<ToolOwner>().ToTable("ToolOwners"); 
 
             modelBuilder.Entity<ToolOwner>().HasKey(x => new { x.FSID, x.ToolID });
 

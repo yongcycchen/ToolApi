@@ -13,10 +13,10 @@ namespace ToolApi.Controllers
     [Route("api/employees")]
     public class EmployeesController: ControllerBase
     {
-        private readonly EmployeeRepository _repository;
+        private readonly IEmployeeRepository _repository;
         private readonly IMapper _mapper;
 
-        public EmployeesController(EmployeeRepository repository, IMapper mapper)
+        public EmployeesController(IEmployeeRepository repository, IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper ?? throw new ArgumentException(nameof(mapper));
@@ -31,7 +31,7 @@ namespace ToolApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddEmployee(ToolAddDto employee)
+        public async Task<IActionResult> AddEmployee(EmployeeAddDto employee)
         {
             var entity = _mapper.Map<Employee>(employee);
             _repository.AddEmployee(entity);
