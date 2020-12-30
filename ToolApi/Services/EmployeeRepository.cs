@@ -15,7 +15,7 @@ namespace ToolApi.Services
         public EmployeeRepository(RoutineDbContext Context)
         {
             _context = Context ?? throw new ArgumentException(nameof(Context));
-        }
+        } 
 
         public void AddEmployee(Employee employee)
         {
@@ -23,7 +23,6 @@ namespace ToolApi.Services
             {
                 throw new ArgumentException(nameof(employee));
             }
-            //employee.
             _context.Employees.Add(employee);
         }
 

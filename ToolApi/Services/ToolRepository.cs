@@ -48,7 +48,6 @@ namespace ToolApi.Services
             {
                 throw new ArgumentException(nameof(ToolId));
             }
-
             return await _context.Tools.AnyAsync(x=>x.ToolID == ToolId);
         }
         public async Task<IEnumerable<Tool>> GetToolsAsync()

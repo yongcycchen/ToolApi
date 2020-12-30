@@ -13,7 +13,5 @@ namespace ToolApi.Entities
 
         public DateTime statusChangedDate { get; set; }
         public DateTime manualChangedDate { get; set; }
-        public ICollection<ToolOwner> ToolOwners { get; set; } = new List<ToolOwner>();
-        public ICollection<ToolNotification> EmployeeNotificationList { get; set; } = new List<ToolNotification>();
     }
 }

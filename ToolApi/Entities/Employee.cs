@@ -10,7 +10,5 @@ namespace ToolApi.Entities
         public string LastName { get; set; }
         public string Email { get; set; }
 
-        public ICollection<ToolOwner> ToolOwners { get; set; } = new List<ToolOwner>();
-        public ICollection<ToolNotification> ToolNotificationList { get; set; } = new List<ToolNotification>();
     }
 }

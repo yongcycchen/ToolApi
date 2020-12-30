@@ -1,29 +1,32 @@
 ﻿<Properties StartupConfiguration="{06D77032-E339-4C26-A34C-A5A0674D6A10}|Default">
-  <MonoDevelop.Ide.ItemProperties.ToolApi PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ToolApi/Services/ToolRepository.cs">
+  <MonoDevelop.Ide.ItemProperties.ToolApi PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ToolApi/Controllers/ToolsController.cs">
     <Files>
-      <File FileName="ToolApi/Services/ToolRepository.cs" Line="20" Column="39" />
-      <File FileName="ToolApi/Services/IToolRepository.cs" Line="7" Column="22" />
-      <File FileName="ToolApi/Controllers/EmployeesController.cs" Line="24" Column="1" NotebookId="1" />
-      <File FileName="ToolApi/Services/EmployeeRepository.cs" Line="37" Column="39" NotebookId="1" />
-      <File FileName="ToolApi/Services/IEmployeeRepository.cs" Line="10" Column="1" NotebookId="1" />
+      <File FileName="ToolApi/Profiles/EmployeeProfiles.cs" Line="1" Column="1" />
+      <File FileName="ToolApi/Controllers/EmployeesController.cs" Line="54" Column="6" />
+      <File FileName="ToolApi/Controllers/NotificationsController.cs" Line="33" Column="32" />
+      <File FileName="ToolApi/Controllers/ToolsController.cs" Line="34" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ToolApi" expanded="True">
             <Node name="ToolApi" expanded="True">
-              <Node name="Controllers" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="ToolsController.cs" selected="True" />
+              </Node>
               <Node name="Data" expanded="True" />
               <Node name="Entities" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Profiles" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Services" expanded="True">
-                <Node name="ToolRepository.cs" selected="True" />
-              </Node>
+              <Node name="Services" expanded="True" />
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>notifications</Value>
         </State>
       </Pad>
     </Pads>

@@ -34,6 +34,8 @@ namespace ToolApi.Controllers
         public async Task<IActionResult> AddEmployee(EmployeeAddDto employee)
         {
             var entity = _mapper.Map<Employee>(employee);
+            if (await _repository.EmployeeExistAsync(employee.FSID))
+                return NoContent();
             _repository.AddEmployee(entity);
             await _repository.SaveAsync();
             return Ok();

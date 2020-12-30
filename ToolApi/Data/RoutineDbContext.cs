@@ -17,6 +17,7 @@ namespace ToolApi.Data
         public DbSet<Employee> Employees { get; set; }
 
         public DbSet<ToolNotification> ToolNotifications { get; set; }
+        public DbSet<ToolOwner> ToolOwners { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,11 +28,7 @@ namespace ToolApi.Data
 
             modelBuilder.Entity<Employee>().HasKey(x => x.FSID);
 
-            modelBuilder.Entity<ToolOwner>().ToTable("ToolOwners"); 
-
             modelBuilder.Entity<ToolOwner>().HasKey(x => new { x.FSID, x.ToolID });
-
-            modelBuilder.Entity<ToolNotification>().ToTable("ToolNotifications");
 
             modelBuilder.Entity<ToolNotification>().HasKey(x => new { x.FSID, x.ToolID });
 

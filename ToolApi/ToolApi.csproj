@@ -16,4 +16,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="ToolNotifications.db" />
+    <None Remove="ToolNotifications.db-shm" />
+    <None Remove="ToolNotifications.db-wal" />
+  </ItemGroup>
 </Project>

@@ -33,6 +33,7 @@ namespace ToolApi
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<IToolRepository, ToolRepository>();
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped<INotificationRepository, NotificationRepository>();
             services.AddDbContext<RoutineDbContext>(option =>
             {
                 option.UseSqlite("Data Source=ToolNotifications.db");
